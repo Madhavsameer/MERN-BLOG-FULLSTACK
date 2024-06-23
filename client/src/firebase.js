@@ -7,12 +7,11 @@ import { initializeApp } from 'firebase/app';
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: "my-final-app-412917.firebaseapp.com",
-  projectId: "my-final-app-412917",
-  storageBucket: "my-final-app-412917.appspot.com",
-  messagingSenderId: "775090139252",
-  appId: "1:775090139252:web:72cb319f095f698ef06121",
-  measurementId: "G-ZLQCB687TG"
+  authDomain: "mern-blog-d541f.firebaseapp.com",
+  projectId: "mern-blog-d541f",
+  storageBucket: "mern-blog-d541f.appspot.com",
+  messagingSenderId: "821093024393",
+  appId: "1:821093024393:web:da5ecfcd716b2f5aa4bc58"
 };
 
 // Initialize Firebase
