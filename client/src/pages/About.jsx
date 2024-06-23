@@ -58,13 +58,13 @@ const About = () => {
                 This blogging application is designed & developed by me.
                 On this blog, you'll find weekly articles and tutorials on 
                 topics such as web development, software engineering, and programming
-                languages. Sahand is always learning and exploring new
+                languages. Madhav is always learning and exploring new
                 technologies, so be sure to check back often for new content!
               </p>
               <br />
               <p>
                 We encourage you to leave comments on our posts and engage with
-                other readers. You can like other people's comments and reply to
+                other readers. You can like other people comments and reply to
                 them as well. We believe that a community of learners can help
                 each other grow and improve.
               </p>
