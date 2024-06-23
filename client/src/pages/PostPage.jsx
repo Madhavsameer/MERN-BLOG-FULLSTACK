@@ -63,7 +63,7 @@ export default function PostPage() {
         {post && post.title}
       </h1>
       <Link
-        to={`/search?category=${post && post.category}`}
+        to={`/search?category=${post && post.category && post.slug}`}
         className='self-center mt-5'
       >
         <Button color='gray' pill size='xs'>
@@ -86,7 +86,7 @@ export default function PostPage() {
         dangerouslySetInnerHTML={{ __html: post && post.content }}
       ></div>
       <div className='max-w-4xl mx-auto w-full'>
-        <CallToAction />
+        
       </div>
       <CommentSection postId={post._id} />
 

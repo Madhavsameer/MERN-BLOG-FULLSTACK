@@ -97,6 +97,7 @@ export default function CreatePost() {
               setFormData({ ...formData, title: e.target.value })
             }
           />
+          
           <Select
             onChange={(e) =>
               setFormData({ ...formData, category: e.target.value })
@@ -104,6 +105,7 @@ export default function CreatePost() {
           >
             <option value='uncategorized'>Select a category</option>
             <option value='javascript'>JavaScript</option>
+            <option value='Personal'>Personal</option>
             <option value='reactjs'>React.js</option>
             <option value='nextjs'>Next.js</option>
           </Select>
@@ -139,7 +141,7 @@ export default function CreatePost() {
           <img
             src={formData.image}
             alt='upload'
-            className='w-full h-72 object-cover'
+            className='w-90 h-180 object-cover'
           />
         )}
         <ReactQuill
