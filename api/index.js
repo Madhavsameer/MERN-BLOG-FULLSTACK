@@ -7,6 +7,7 @@ import postRoutes from './routes/post.route.js';
 import commentRoutes from './routes/comment.route.js';
 import cookieParser from 'cookie-parser';
 import path from 'path';
+import axios from 'axios'; // Import Axios for HTTP requests
 
 dotenv.config();
 
@@ -25,6 +26,23 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
+
+// Define the Keep-Alive function
+const keepAlive = async () => {
+  try {
+    const response = await axios.get('https://mern-blog-59mo.onrender.com/api/user'); // Ping any of your existing API endpoints
+    if (response.status === 200) {
+      console.log('Keep-alive ping successful.');
+    } else {
+      console.log(`Unexpected status code: ${response.status}`);
+    }
+  } catch (error) {
+    console.error(`Error in keep-alive ping: ${error.message}`);
+  }
+};
+
+// Set an interval to ping the server every 5 minutes (300,000 ms)
+setInterval(keepAlive, 300000);
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000!');
